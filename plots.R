@@ -18,3 +18,32 @@ hist(df.train$Fare, main="Fare (fee paid for ticket[s])", xlab = NULL,
 barplot(table(df.train$Embarked), 
         names.arg = c("Cherbourg", "Queenstown", "Southampton"),
         main="Embarked (port of embarkation)", col="sienna")
+
+mosaicplot(df.train$Pclass ~ df.train$Survived, 
+           main="Passenger Fate by Traveling Class", shade=FALSE, 
+           color=TRUE, xlab="Pclass", ylab="Survived")
+#PClass appears important. More PClass=1 survived , next PClass=2 and then Pclass=3.
+#But Why? Closer to deck? non-crew? 
+#What's the difference between sefirst and second class?
+
+mosaicplot(df.train$Sex ~ df.train$Survived, 
+           main="Passenger Fate by Gender", shade=FALSE, color=TRUE, 
+           xlab="Sex", ylab="Survived")
+
+mosaicplot(df.train$Sex ~ df.train$Survived, 
+           main="Passenger Fate by Gender", shade=FALSE, color=TRUE, 
+           xlab="Sex", ylab="Survived")
+
+#Tons more Females survived then Males.
+#Get a correlation with Age and we're set.
+
+
+mosaicplot(df.train$Embarked ~ df.train$Survived, 
+           main="Passenger Fate by Port of Embarkation",
+           shade=FALSE, color=TRUE, xlab="Embarked", ylab="Survived")
+
+#Cherbourg then Queensland then SouthHampton.
+
+
+
+

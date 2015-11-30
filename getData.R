@@ -1,11 +1,5 @@
-rm(list=ls())
-
-readData <- function(path.name, file.name, column.types, missing.types) {
-  read.csv( url( paste(path.name, file.name, sep="") ), 
-            colClasses=column.types,
-            na.strings=missing.types )
-}
-Titanic.path <- "https://raw.github.com/wehrley/Kaggle_Titanic/master/"
+#Titanic.path <- "https://raw.github.com/wehrley/Kaggle_Titanic/master/"
+Titanic.path <- "./Data/"
 train.data.file <- "train.csv"
 test.data.file <- "test.csv"
 missing.types <- c("NA", "")
